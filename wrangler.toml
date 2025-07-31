@@ -12,12 +12,10 @@ name = "luoxiaohei-website-staging"
 # Static assets configuration - 直接从根目录部署
 [site]
 bucket = "./"
-entry-point = "workers-site"
 
 # Build configuration - 无需构建命令，直接部署静态文件
 [build]
 command = ""
-upload.format = "service-worker"
 
 # Variables
 [vars]
