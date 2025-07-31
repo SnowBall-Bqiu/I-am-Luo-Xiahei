@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler publish",
-    "deploy:staging": "wrangler publish --env staging",
-    "deploy:production": "wrangler publish --env production",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:production": "wrangler deploy --env production",
     "preview": "wrangler preview",
     "tail": "wrangler tail",
     "format": "prettier --write \"**/*.{js,css,json,md}\""
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",
     "prettier": "^2.8.0",
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.0.0"
   },
   "repository": {
     "type": "git",
