@@ -1,0 +1,27 @@
+name = "luoxiaohei-website"
+main = "src/index.js"
+compatibility_date = "2023-12-01"
+
+[env.production]
+name = "luoxiaohei-website"
+# route = "your-domain.com/*"  # 取消注释并设置你的自定义域名
+
+[env.staging]
+name = "luoxiaohei-website-staging"
+
+# Static assets configuration - 直接从根目录部署
+[site]
+bucket = "./"
+entry-point = "workers-site"
+
+# Build configuration - 无需构建命令，直接部署静态文件
+[build]
+command = ""
+upload.format = "service-worker"
+
+# Variables
+[vars]
+ENVIRONMENT = "production"
+
+# GitHub Pages 兼容配置
+# 支持直接从 GitHub 仓库部署，无需额外构建步骤

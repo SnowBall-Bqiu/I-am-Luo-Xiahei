@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 罗小黑战记</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #fcee50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        
+        .error-description {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        
+        .back-home {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #75b36d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            border: 2px solid #fcee50;
+        }
+        
+        .back-home:hover {
+            background-color: #5a9454;
+            transform: translateY(-2px);
+        }
+        
+        .luoxiaohei-img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container top-inner flexbox">
+            <div class="top-logo">
+                <h2><img src="image/logo3.jpg" alt="头像"><span>I am罗小黑</span></h2>
+            </div>
+            <div class="nav-wrap">
+                <ul class="nav flexbox">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="web/role-info.html">角色介绍</a></li>
+                    <li><a href="web/cute-photo.html">可爱头像</a></li>
+                    <li><a href="web/dub.html">角色配音</a></li>
+                    <li><a href="web/video.html">视频赏析</a></li>
+                    <li><a href="https://ghostzly.github.io/domitory/" target="_blank">返回寝室</a></li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <div class="error-message">哎呀！页面走丢了</div>
+            <img src="image/aaa-1.jpg" alt="罗小黑" class="luoxiaohei-img">
+            <div class="error-description">
+                看起来你要找的页面不存在，可能是链接错误或者页面已经被移动了。<br>
+                不过没关系，罗小黑会带你回到正确的地方！
+            </div>
+            <a href="index.html" class="back-home">回到首页</a>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <p>————《The Legend of LUOXIAOHEI》————</p>
+    </div>
+</body>
+</html>

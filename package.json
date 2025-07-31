@@ -1,0 +1,36 @@
+{
+  "name": "luoxiaohei-website",
+  "version": "1.0.0",
+  "description": "罗小黑战记官方网站 - Cloudflare Workers部署",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "deploy:staging": "wrangler publish --env staging",
+    "deploy:production": "wrangler publish --env production",
+    "preview": "wrangler preview",
+    "tail": "wrangler tail",
+    "format": "prettier --write \"**/*.{js,css,json,md}\""
+  },
+  "keywords": [
+    "luoxiaohei",
+    "cloudflare-workers",
+    "static-site",
+    "animation",
+    "website"
+  ],
+  "author": "MTJJ",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0",
+    "prettier": "^2.8.0",
+    "wrangler": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/luoxiaohei-website.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
