@@ -1,0 +1,309 @@
+/* 页脚容器样式 */
+#footer {
+    width: 100%;
+    padding: 50px 0 30px 0;
+    margin-top: 60px;
+    background: rgba(45, 45, 45, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(139, 195, 74, 0.3);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* 页脚内容容器 */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+/* 页脚栏目 */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    color: #8bc34a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(139, 195, 74, 0.3);
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #8bc34a;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #a5d6a7;
+    text-decoration: underline;
+}
+
+/* GitHub链接样式 */
+.github-link {
+    margin-top: 15px;
+}
+
+.github-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #8bc34a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(139, 195, 74, 0.1);
+    border: 1px solid rgba(139, 195, 74, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    margin-bottom: 0;
+}
+
+.github-link a:hover {
+    background: rgba(139, 195, 74, 0.2);
+    border-color: rgba(139, 195, 74, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+}
+
+.github-link svg {
+    transition: transform 0.3s ease;
+    width: 18px;
+    height: 18px;
+}
+
+.github-link a:hover svg {
+    transform: scale(1.1);
+}
+
+/* 页脚底部版权信息 */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(139, 195, 74, 0.2);
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+}
+
+/* 时间线页面的特殊样式 */
+.timeline-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #2d5a27, #4a7c59, #6b9b37, #8bc34a);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(75, 124, 89, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 40px;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 40px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(45, 90, 39, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(139, 195, 74, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+
+.timeline-content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(45, 90, 39, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(107, 155, 55, 0.4);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -30px;
+    border-left-color: #fff;
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -30px;
+    border-right-color: #fff;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #6b9b37, #8bc34a);
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(107, 155, 55, 0.3), 0 4px 15px rgba(45, 90, 39, 0.2);
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.timeline-item.left .timeline-marker {
+    right: -50px;
+}
+
+.timeline-item.right .timeline-marker {
+    left: -50px;
+}
+
+.timeline-date {
+    background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 50%, #6b9b37 100%);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px rgba(45, 90, 39, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+.timeline-content h3 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.timeline-content p {
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-content li {
+    padding: 8px 0;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.timeline-content li:last-child {
+    border-bottom: none;
+}
+
+.timeline-content li:hover {
+    color: #4a7c59;
+    transform: translateX(5px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 70px !important;
+        padding-right: 20px !important;
+    }
+    
+    .timeline-marker {
+        left: 20px !important;
+        right: auto !important;
+    }
+    
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+        border-right-color: #fff !important;
+        border-left-color: transparent !important;
+    }
+    
+    #footer {
+        padding: 40px 0 20px 0;
+        margin-top: 40px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section p,
+    .footer-section a {
+        font-size: 13px;
+    }
+    
+    .footer-bottom {
+        margin-top: 30px;
+        font-size: 11px;
+    }
+}
