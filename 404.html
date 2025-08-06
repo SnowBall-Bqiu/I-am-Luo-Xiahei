@@ -8,12 +8,17 @@
     <style>
         .error-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             min-height: 80vh;
-            text-align: center;
             padding: 20px;
+            gap: 40px;
+        }
+        
+        .error-content {
+            text-align: left;
+            max-width: 500px;
         }
         
         .error-code {
@@ -34,7 +39,6 @@
             font-size: 16px;
             margin-bottom: 40px;
             color: #cccccc;
-            max-width: 600px;
             line-height: 1.6;
         }
         
@@ -56,10 +60,20 @@
         }
         
         .luoxiaohei-img {
-            width: 572px;
-            height: 240px;
-            margin: 20px 0;
+            width: 480px;
+            height: 480px;
             opacity: 0.8;
+        }
+
+        @media (max-width: 1024px) {
+            .error-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .error-content {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -76,14 +90,16 @@
     
     <div class="main">
         <div class="error-container">
-            <div class="error-code">404</div>
-            <div class="error-message">哎呀！页面走丢了</div>
-            <img src="/assets/image/QAQ.gif" alt="罗小黑" class="luoxiaohei-img" controls>
-            <div class="error-description">
-                看起来你要找的页面不存在，可能是链接错误或者页面已经被移动了。<br>
-                不过没关系，罗小黑会带你回到正确的地方！
+            <div class="error-content">
+                <div class="error-code">404</div>
+                <div class="error-message">哎呀！页面走丢了</div>
+                <div class="error-description">
+                    看起来你要找的页面不存在，可能是链接错误或者页面已经被移动了。<br>
+                    不过没关系，小黑会带你回到正确的地方！
+                </div>
+                <a href="index.html" class="back-home">回到首页</a>
             </div>
-            <a href="index.html" class="back-home">回到首页</a>
+            <img src="/assets/image/nogo.gif" alt="罗小黑" class="luoxiaohei-img" controls>
         </div>
     </div>
     
